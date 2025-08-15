@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up - Odin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div>odin logo</div>
+  </div>
+  <div class="signup">
+    <h2>Welcome to The Odin Project! The place where everything can be made real, <em>even your dreams!</em></h2>
+    <form action="https://httpbin.org/" method="post">
+      <div class="forminputs">
+        <legend>Let's do this!</legend>
+        <div class="input-row">
+          <div class="input-wrapper">
+            <label for="firstname">FIRST NAME</label>
+            <input type="text" name="firstname*" id="firstname" " pattern=" [A-Za-z]/g" required>
+          </div>
+          <div class="input-wrapper">
+            <label for="lastname">LAST NAME</label>
+            <input type="text" name="lastname" id="lastname" pattern="[A-Za-z]/g">
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-wrapper">
+            <label for="email">E-MAIL</label>
+            <input type="email" name="email" id="email" quired>
+          </div>
+          <div class="input-wrapper">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" name="phone" id="phone" quired>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-wrapper">
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          <div class="input-wrapper">
+            <label for="password">CONFIRM PASSWORD</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" id="submit">Create Account</button>
+
+      <p>Already have an account? <a href="#" referrerpolicy="no-referrer">Log in</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -69,7 +69,7 @@ legend {
   font-size: 25px;
 }
 
-.forminputs {
+.form-inputs {
   background-color: var(--form-color);
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);;
   flex: 1;
@@ -137,10 +137,44 @@ input {
   height: 1.7rem;
 }
 
+input:focus {
+  outline-color: var(--accent-color);
+}
+
 input:invalid {
   outline-color: red;
 }
 
 label {
   font-weight: lighter;
+}
+
+.error {
+  --error-color: rgba(223, 138, 132, 0.4);
+
+  animation-name: errorIn;
+  animation-duration: 250ms;
+  animation-timing-function: ease-out;
+  height: 4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: rgb(116, 0, 0);
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: var(--error-color);
+  border-bottom: 3px solid var(--error-color);
+}
+
+@keyframes errorIn {
+  from {
+    height: 0px;
+    border-bottom: 0px solid var(--error-color);
+  }
+  to {
+    height: 4rem;
+    border-bottom: 3px solid var(--error-color);
+  }
 }
